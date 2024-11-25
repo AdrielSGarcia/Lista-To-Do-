@@ -1,0 +1,451 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans&family=Roboto:wght@100;300&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Arial';
+    color: #16323b;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100vh;
+}
+
+header{
+    display: flex;
+}
+
+body .todo-container header{
+    border: none;
+}
+
+body #toolbar{
+    border: none;
+}
+
+header #imgIFPR{
+    max-height: 12vh;
+    max-width: 12vw;
+    margin-left: 0vh;
+}
+
+body {
+    background: #87af98;
+    background-position: center;
+    background-size: auto;
+}
+
+button {
+    background-color: #fffbefc9;
+    border: 1px solid #696e6b;
+    padding: .3rem .6rem;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s;
+    border-radius: 50px;
+}
+
+button:hover {
+    background-color: #102F5e;
+    color: #fff;
+    border-radius: 50px !important;
+    border-color: transparent !important;
+}
+
+button:hover>i {
+    color: #fff;
+}
+
+button i {
+    color: #447786;
+    font-weight: bold;
+    pointer-events: none;
+    
+}
+
+input,
+select {
+    padding: 0.25rem 0.5rem;
+}
+
+#select-priority{
+    background-color: #e4dede;
+    border-style:dashed;
+    border: 5px;
+    border-color: black;
+    transition: 0.5s;
+    border-radius: 5px;
+}
+
+#select-priority:hover{
+    background-color: #75b695;
+    border-style:dashed;
+    border-radius: 5px;
+    border-color: black;
+    transition: 0.5s;
+    border: 5px;
+
+}
+
+.hide {
+    display: none;
+}
+
+#title-todo {
+    font-family: 'Helvetica';
+    color: #4aaa62;
+    margin-left: 6vh;
+    margin-top: 3vh;
+}
+
+.todo-container {
+    max-width: 550px;
+    margin: 3rem auto;
+    background-color: #fdfdfd;
+    padding: 1.5rem;
+    border-radius: 15px;
+    box-shadow: 5px 5px 10px #888888;
+}
+
+.todo-container header {
+    text-align: center;
+    padding: 0 1rem 1rem;
+    border-bottom: 0.1rem solid #14213d;
+}
+
+#todo-form,
+#edit-form {
+    padding: 1rem;
+}
+
+#todo-form p,
+#edit-form p {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+#select-priority {
+    margin-right: 5px;
+}
+
+.form-control {
+    display: flex;
+}
+
+.form-control input {
+    margin-right: .3rem;
+    width: 100%;
+}
+
+#cancel-edit-btn {
+    margin-top: 1rem;
+}
+
+#toolbar {
+    padding: 1rem;
+    border-bottom: 0.1rem solid #14213d;
+    display: flex;
+}
+
+#toolbar h4 {
+    margin-bottom: 0.5rem;
+}
+
+#search {
+    padding-right: 1rem;
+    margin-right: 1rem;
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+#search form {
+    display: flex;
+}
+
+#search input {
+    width: 100%;
+    margin-right: 0.3rem;
+}
+
+#filter {
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+#filter select {
+    flex: 1;
+    border-style:dashed;
+    border: 5px;
+    border-color: black;
+    transition: 0.5s;
+    border-radius: 5px;
+}
+
+#filter select:hover{
+    background-color: #75b695;
+    border-style:dashed;
+    border-radius: 5px;
+    border-color: black;
+    transition: 0.5s;
+    border: 5px;
+}
+
+#edit-form button{
+    padding: .4rem .5rem;
+}
+
+#edit-form #cancel-edit-btn{
+    padding: .2rem .4rem;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#filter select option{
+    transition: 0.5s;
+}
+
+#filter select option:hover{
+    background-color: #75b695;
+    transition: 0.5s;
+}
+
+#select-priority-edit {
+    margin-right: 5px;
+}
+
+#select-priority-edit {
+    margin-right: 5px;
+}
+
+#countStatus {
+    display: flex;
+    justify-content: end;
+    margin-right: 5%;
+    font-style: italic;
+}
+
+.todo {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0.7rem;
+    transition: .3s;
+    size: 10px;
+    border-bottom: 1px solid #14213d;
+}
+
+#priority-high {
+    font-size: 0.8em;
+    background-color: rgb(255, 0, 0);
+    font-weight: bold;
+    width: 12%;
+    height: 3vh;
+    border-radius: 3px;
+    margin-left: 2%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#priority-middle {
+    font-size: 0.8rem;
+    background-color: #fca050;
+    font-weight: bold;
+    width: 12%;
+    border-radius: 3px;
+    height: 3vh;
+    margin-left: 2%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#priority-low {
+    font-size: 0.8em;
+    background-color: #121c2d;
+    font-weight: bold;
+    border-radius: 3px;
+    width: 12%;
+    height: 3vh;
+    margin-left: 2%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+#priority-low p,
+#priority-middle p,
+#priority-high p {
+    color: #fff;
+}
+
+
+.todo h3 {
+    flex: 1;
+    font-size: 0.85rem;
+    overflow-wrap: anywhere;
+}
+
+.todo button {
+    margin-left: 0.4rem;
+    border-radius: 50px;
+    padding: .45rem .45rem;
+
+}
+
+.done {
+    background-color: #395169;
+}
+
+.done h3 {
+    color: #fff;
+    text-decoration: line-through;
+    font-style: italic;
+}
+
+
+.login-btn {
+    position: absolute;
+    top: 10px;        
+    right: 20px; 
+    background-color: #1a6418;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    transform: 0.5s;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.login-btn:hover {
+    background-color: #3aa436;
+    transition: 0.3;
+    border-radius: 5px !important;
+}
+
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #ffffff;
+    width: 300px;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    position: relative;
+}
+
+.login-header {
+    background-color: #4aaa62;
+    color: #ffffff;
+    padding: 1rem;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.login-avatar img {
+    margin: 1rem auto;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 2px solid #1a6418;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+
+.login-form .form-control input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+
+.form-options {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.85rem;
+    color: #555;
+}
+
+.form-options a {
+    color: #4aaa62;
+    text-decoration: none;
+}
+
+.form-options a:hover {
+    text-decoration: underline;
+}
+
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #333;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    color: #000;
+}
+
+
+.login-button {
+    padding: 0.75rem;
+    background-color: #1a6418;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.login-button:hover {
+    background-color: #4aaa62;
+    transition: 0.8s;
+}
+
+.login-header{
+ 
+    font-family: 'Arial';
+    color: #79b3c6;
+    
+
+}
+
+#search form button{
+    padding: .4rem .4rem !important;
+}
